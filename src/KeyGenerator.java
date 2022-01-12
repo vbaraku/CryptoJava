@@ -41,14 +41,14 @@ public class KeyGenerator {
 		return s.substring(0, length).getBytes("UTF-8");
 	}
 
-//	// Helper Function: write content to desired file path
-//	private void writeToFile(String path, byte[] content) throws IOException {
-//		File f = new File(path);
-//		f.getParentFile().mkdirs();
-//		FileOutputStream fos = new FileOutputStream(f);
-//		fos.write(content);
-//		fos.flush();
-//		fos.close();
-//	}
+	// Helper Function: write content to desired file path
+	private void writeToFile(String path, byte[] content) throws IOException {
+		File f = new File(path);
+		f.getParentFile().mkdirs();
+		FileOutputStream fos = new FileOutputStream(f);
+		fos.write(content);
+		fos.flush();
+		fos.close();
+	}
 
 }

@@ -14,11 +14,17 @@ public class SymCryptoMain {
 
 		try {
 			// Instantiate the secret key generator
+			String keyByUser;
+			
 			KeyGenerator keygen = new KeyGenerator("AES", 16, "MySecr3tPassw0rd");
+			
+			
+			
 
 			// Show choice window for user
 			int choice = -2;
 			while (choice != -1) {
+				
 				String[] options = { "Encrypt All", "Decrypt All", "Exit" };
 				choice = JOptionPane.showOptionDialog(null, "Select an option", "Options", 0,
 						JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
