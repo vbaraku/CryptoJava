@@ -17,7 +17,6 @@ public class SymCryptoMain {
 
 		try {
 			// Instantiate the secret key generator
-			String keyByUser;
 			KeyGenerator keygen = new KeyGenerator("AES", 16, "MySecr3tPassw0rd");
 
 			JButton btn1 = new JButton("Encrypt a file");
@@ -35,7 +34,7 @@ public class SymCryptoMain {
 						}
 
 						JOptionPane.showMessageDialog(frame, file.getName() + " Has Been Encrypted", "Encryption Sucessfull",
-								JOptionPane.INFORMATION_MESSAGE, new ImageIcon("src/check.png"));
+								JOptionPane.INFORMATION_MESSAGE, new ImageIcon(SymCryptoMain.class.getResource("check.png")));
 					} else if (response == JFileChooser.CANCEL_OPTION) {
 						JOptionPane.showMessageDialog(frame, "Canceled Encryption", "Cancel",
 								JOptionPane.INFORMATION_MESSAGE);
@@ -58,7 +57,7 @@ public class SymCryptoMain {
 									JOptionPane.ERROR_MESSAGE);
 						}
 						JOptionPane.showMessageDialog(frame, file.getName() + " Has Been Decrypted!",
-								"Encription Message", JOptionPane.INFORMATION_MESSAGE, new ImageIcon("src/check.png"));
+								"Encription Message", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(SymCryptoMain.class.getResource("check.png")));
 					} else if (response == JFileChooser.CANCEL_OPTION) {
 						JOptionPane.showMessageDialog(frame, "Canceled Decryption", "Cancel",
 								JOptionPane.INFORMATION_MESSAGE);
@@ -71,6 +70,7 @@ public class SymCryptoMain {
 			// GUI PROPERTIES
 			Container pane = frame.getContentPane();
 			frame.setResizable(false);
+			frame.setLocationRelativeTo(null);
 			JPanel P = new JPanel();
 			P.setBackground(new Color(31, 71, 133));
 			
@@ -80,10 +80,10 @@ public class SymCryptoMain {
 			JLabel select = new JLabel("I Want To:");
 			
 			//Images
-			ImageIcon icon1 = new ImageIcon("src/Encrypted.png");
-			ImageIcon icon2 = new ImageIcon("src/key.png");
+			ImageIcon icon1 = new ImageIcon(SymCryptoMain.class.getResource("encrypted.png"));
+			ImageIcon icon2 = new ImageIcon(SymCryptoMain.class.getResource("key.png"));
 			JLabel home = new JLabel();
-			home.setIcon(new ImageIcon("src/home.png"));
+			home.setIcon(new ImageIcon(SymCryptoMain.class.getResource("home.png")));
 			
 			welcome.setFont(new Font("Monospaced", Font.BOLD, 26));
 			welcome.setForeground(Color.WHITE);
